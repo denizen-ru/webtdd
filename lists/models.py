@@ -9,4 +9,4 @@ class Item(models.Model):
         verbose_name_plural = "Items"
 
     def __str__(self):
-        pass
+        return self.text
