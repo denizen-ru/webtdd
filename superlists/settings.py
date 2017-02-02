@@ -23,11 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g215l-p75g@okpuv+#1-*=vy1-e3%&f$8q^pk=61d^6fpw7^!z'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-TEMPLATE_DEBUG = DEBUG
 
-ALLOWED_HOSTS = ['ubuntuserver.local']
+ALLOWED_HOSTS = ['*', 'ubuntuserver.local']
 
 
 # Application definition
