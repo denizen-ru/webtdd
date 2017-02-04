@@ -22,6 +22,8 @@ class Item(models.Model):
     class Meta:
         verbose_name = "Item"
         verbose_name_plural = "Items"
+        ordering = ('id',)
+        unique_together = ('list', 'text')
 
     def __str__(self):
         return self.text
