@@ -43,6 +43,10 @@ INSTALLED_APPS = [
 ]
 
 AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = [
+    'accounts.authentication.PasswordlessAuthenticationBackend',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -142,3 +146,9 @@ LOGGING = {
     },
     'root': {'level': 'INFO'},
 }
+
+
+EMAIL_HOST = 'localhost'
+EMAIL_HOST_USER = 'admin@localhost'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_USE_TLS = True
